@@ -25,18 +25,21 @@ layout: default
 
 We’re going to familiarize ourselves with moving around our folders without using the graphical interface
 
-When you start the terminal the `bash` program starts off automatically and leaves you with the `command prompt`, which looks like this:  `$`.
+When you start the terminal the first thing you will notice is the
+`command prompt`, which looks like this:  `$` (or `>` on Windows).
+The command prompt means that the computer is waiting for your orders.
+Every order (command) has to be confirmed by hitting `ENTER`.
 
 When the command prompt is not visible you cannot execute new commands.
 Let's start with a command that prints your current working directory
 
     pwd
 
-With ls you can get a list of all the content in that directory:
+With `ls` you can get a list of all the content in that directory:
 
     ls
 
-To get into one directory run cd followed by the name of that directory:
+To get into one directory run `cd` followed by the name of that directory:
 
     cd documents
 
@@ -60,7 +63,7 @@ Let's create a text file there:
 
     touch hello.txt
 
-Let's type ls to see if it is there:
+Let's type `ls` to see if it is there:
 
     ls
 
@@ -81,14 +84,14 @@ The terminal is not only a means to talk to your computer, it can also run many 
 # 2. Get to know the irb program
 
 
-Now let's open a ruby terminal
+Now let's open a Ruby terminal
 
     irb
 
-As you notice the command prompt is gone and we have entered another program on our terminal called the ruby terminal.
-Ther ruby terminal is an environment that understands and executes ruby code. You can try out all commands you did during this tutorial: `http://tryruby.org` which is a browser based ruby environment.
+As you notice the command prompt is gone and we have entered another program on our terminal called the Ruby terminal.
+The Ruby terminal is an environment that understands and executes Ruby code. You can try out all commands you did during this tutorial: `http://tryruby.org` which is a browser based Ruby environment.
 
-You can quite `irb` anytime by typing `exit`.
+You can quit `irb` anytime by typing `exit`.
 
 ## Strings and Integers
 
@@ -96,7 +99,7 @@ For example you could write this and hit Enter:
 
     "Hello World"
 
-Any word literals that are not numbers or code need to be written in quotation marks ("" or '') so ruby terminal knows what it is.
+Any word literals that are not numbers or code need to be written in quotation marks (`""` or `''`) so Ruby terminal knows what it is.
 
 And as we know Ruby knows math too:
 
@@ -116,7 +119,7 @@ Let's output the variable
 
     planet
 
-As you can see the ruby terminal gives you feedback on what you typed. We can also call it the return value.
+As you can see the Ruby terminal gives you feedback on what you typed. We can also call it the return value.
 
 You can also output any string:
 
@@ -146,7 +149,7 @@ Capitalize the planet:
 
     puts "Hello " + planet.upcase + "!"
 
-##Arrays
+## Arrays
 
 An array is way how one can store a list or a collection in a certain format. Let's create a list of planets stored in an array. You can imagine it like a bookshelf.
 
@@ -182,11 +185,12 @@ As you might have guessed, you can get the last one with:
 
     planets.last
 
-### Why is the first element ``[0]``?
+## Why is the first element ``[0]``?
+
 You should know that an array starts counting with 0.
 So for the array ``planets = ["earth", "saturn", "jupiter"]``, the last one would be `planets[2]`.
 
-##Iteration
+## Iteration
 Iteration means looping through an array and doing something with each item. Looping means you repeat the same action over and over until an halt. In our example we will perform the same action on the first item in the array to the last one. The placeholder for those items is stored in the pipes | |.
 
 Now we are just saying `puts` to each of the items:
@@ -209,10 +213,15 @@ Now we add an `"Hello "` to it:
 
 <span class="lead coach"><i class="icon-comment-alt"> Coach</i>: If students get stuck probably best to exit irb and start over again.</span>
 
-#Saving code in files
+# 3. Saving code in files
+
 As you noticed, anytime you quit `irb` and go back in again, nothing was saved and you have to start all over again. In the long run you will want to save code in files.
 
-So let's create a file for saving ruby code:
+So let's create a file for saving Ruby code. First quit `irb`:
+
+    exit
+
+and now you can give commands to your operating system:
 
     touch blabla.rb
 
@@ -230,4 +239,4 @@ You can now run this file in the terminal:
     ruby blabla.rb
 
 
-If you enjoyed running .rb files in the terminal, here are some more commands you can try out (save the text in the files and run it in the terminal) [Chris Pine LearnToProgram](http://pine.fm/LearnToProgram/?Chapter=01) tutorial, you can skip any parts that are not that interesting to you, e.g. line-widths in a poem or how old you are in seconds.
+If you enjoyed running `.rb` files in the terminal, here are some more commands you can try out (save the text in the files and run it in the terminal) [Chris Pine LearnToProgram](http://pine.fm/LearnToProgram/?Chapter=01) tutorial, you can skip any parts that are not that interesting to you, e.g. line-widths in a poem or how old you are in seconds.
